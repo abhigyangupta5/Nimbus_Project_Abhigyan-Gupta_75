@@ -1,1 +1,60 @@
+#include <stdio.h>
 
+\\Structure to store course details
+struct Course
+{
+  char name[30];
+  float grade;
+  int credits;
+};
+
+//Structure to store student details
+struct Student
+{
+  int roll;
+  char name[30];
+  int count;
+  struct Course courses[10]; //simple array
+};
+
+//Function to perform the action of adding a course
+void add Course(struct Student *s)
+{
+  printf("Course name:");
+  scanf("%s",&->courses[s->count].name);
+
+  printf("Credits:");
+  scanf("%d",&s->courses[s->count].credits);
+
+  s->courses[s->count].grade=0; //initially
+  s->count++;
+
+  printf("Course added!\n");
+}
+
+//Function to perform the action of dropping a course
+void dropCourse(struct Student *s)
+{
+  if(s->count==0){
+     printf("No courses to drop!\n");
+    return;
+}
+
+int index;
+printf("Enter course number to drop (1 to %d:",s->count);
+scanf("%d",&index);
+index--;
+
+if(index<0||index>=s->count){
+   printf("invalid course number!\n");
+   return;
+}
+
+for(int i=index;i<s->count-1;i++){
+   s->courses[i]=s->courses[i+1];
+}
+
+s->count--;
+printf("Course dropped!\n);
+
+}
