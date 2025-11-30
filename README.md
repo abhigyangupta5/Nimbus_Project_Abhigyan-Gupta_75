@@ -61,6 +61,9 @@ DEVELOPMENT STEPS:
       Tried adding or removing courses,entering grades and checking if gpa calculation works properly.
 
 
+      OUTPUT SCREENSHOT:
+
+
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/0c4b176f-ed0b-4011-8a7f-549fb229d7a9" />
 
 
