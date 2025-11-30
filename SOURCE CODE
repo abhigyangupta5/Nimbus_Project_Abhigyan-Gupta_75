@@ -80,3 +80,31 @@ float calcGPA(struct Student s)
     }
     return (credit_sum==0)?0:total/credit_sum;
 }
+//Main Function
+int main() 
+{
+    struct Student s;
+    s.count = 0;
+
+    printf("Enter roll number: ");
+    scanf("%d", &s.roll);
+
+    printf("Enter name: ");
+    scanf("%s", s.name);
+
+    int choice;
+
+    while (1) {
+        printf("\n1. Add Course\n2. Drop Course\n3. Enter Grades\n4. Calculate GPA\n5. Exit\nChoose: ");
+        scanf("%d", &choice);
+
+        if (choice == 1) addCourse(&s);
+        else if (choice == 2) dropCourse(&s);
+        else if (choice == 3) enterGrades(&s);
+        else if (choice == 4) printf("GPA = %.2f\n", calcGPA(s));
+        else break;
+    }
+
+    return 0;
+}
+
