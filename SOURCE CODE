@@ -59,6 +59,7 @@ printf("Course dropped!\n);
 
 }
 
+//function to grade a course
 void entergrades(struct Student *s)
 {
     for (int i = 0; i < s->count; i++)
@@ -68,7 +69,7 @@ void entergrades(struct Student *s)
     }
 }
 
-
+//function to calculate the gpa
 float calcGPA(struct Student s)
 {
      float total = 0,credit_sum=0;
