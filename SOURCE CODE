@@ -58,3 +58,24 @@ s->count--;
 printf("Course dropped!\n);
 
 }
+
+void entergrades(struct Student *s)
+{
+    for (int i = 0; i < s->count; i++)
+    {
+         printf("Enter grade for %s: ", s->courses[i].name);
+         scanf("%f",&s->courses[i].grade);
+    }
+}
+
+
+float calcGPA(struct Student s)
+{
+     float total = 0,credit_sum=0;
+     for (int i = 0; i < s.count; i++)
+     {
+          total += s.courses[i].grade * s.courses[i].credits;
+          credit_sum+=s.course[i].credits;
+    }
+    return (credit_sum==0)?0:total/credit_sum;
+}
