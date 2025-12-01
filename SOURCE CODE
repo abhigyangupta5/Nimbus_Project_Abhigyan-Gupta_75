@@ -35,27 +35,30 @@ void add Course(struct Student *s)
 //Function to perform the action of dropping a course
 void dropCourse(struct Student *s)
 {
-  if(s->count==0){
-     printf("No courses to drop!\n");
-    return;
-}
+  if(s->count==0)
+   {
+       printf("No courses to drop!\n");
+       return;
+   }
 
-int index;
-printf("Enter course number to drop (1 to %d:",s->count);
-scanf("%d",&index);
-index--;
+  int index;
+  printf("Enter course number to drop (1 to %d:",s->count);
+  scanf("%d",&index);
+  index--;
 
-if(index<0||index>=s->count){
-   printf("invalid course number!\n");
-   return;
-}
+  if(index<0||index>=s->count)
+  {
+      printf("invalid course number!\n");
+      return;
+  }
 
-for(int i=index;i<s->count-1;i++){
-   s->courses[i]=s->courses[i+1];
-}
+  for(int i=index;i<s->count-1;i++)
+  {
+     s->courses[i]=s->courses[i+1];
+  }
 
-s->count--;
-printf("Course dropped!\n);
+  s->count--;
+  printf("Course dropped!\n);
 
 }
 
@@ -94,7 +97,8 @@ int main()
 
     int choice;
 
-    while (1) {
+    while (1) 
+    {
         printf("\n1. Add Course\n2. Drop Course\n3. Enter Grades\n4. Calculate GPA\n5. Exit\nChoose: ");
         scanf("%d", &choice);
 
